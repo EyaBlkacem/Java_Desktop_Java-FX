@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.MyReservationsController"
+            style="-fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+    <VBox alignment="CENTER"
+          spacing="18"
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- 🔵 CARD -->
+        <VBox spacing="15"
+              alignment="CENTER"
+              maxWidth="520"
+              style="-fx-background-color: white;
+                     -fx-background-radius: 18;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 18, 0, 0, 6);">
+
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <!-- LOGO -->
+            <ImageView fitWidth="120" preserveRatio="true">
+                <image>
+                    <Image url="file:///C:/Users/fatma/eclipse-workspace/Projetexamen/src/presentation/flight_logo.png"/>
+                </image>
+            </ImageView>
+
+            <!-- TITRE -->
+            <Label text="My Reservations"
+                   style="-fx-font-size: 24px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #1e3c72;" />
+
+           
+
+            <!-- LIST VIEW -->
+            <ListView fx:id="reservationList"
+                      prefHeight="300"
+                      style="-fx-background-radius: 12;
+                             -fx-border-radius: 12;
+                             -fx-border-color: #dce3f0;" />
+
+            <!-- BUTTONS -->
+            <HBox spacing="15" alignment="CENTER">
+
+                <Button text="Remove"
+                        onAction="#delete"
+                        style="-fx-background-color: #ff6b6b;
+                               -fx-text-fill: white;
+                               -fx-font-weight: bold;
+                               -fx-background-radius: 10;
+                               -fx-padding: 10 20;" />
+
+                 <Button text="Back"
+                        onAction="#back"
+                        style="-fx-background-color: #4775e4;
+                               -fx-text-fill: white;
+                               -fx-font-weight: bold;
+                               -fx-background-radius: 10;
+                               -fx-padding: 10 20;" />
+
+            </HBox>
+
+        </VBox>
+    </VBox>
+</AnchorPane>

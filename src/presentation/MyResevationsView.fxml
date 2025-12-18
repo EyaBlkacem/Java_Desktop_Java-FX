@@ -1,0 +1,16 @@
+<VBox spacing="15" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="presentation.MyReservationsController">
+
+    <Label text="My Reservations"
+           style="-fx-font-size: 20; -fx-font-weight: bold"/>
+
+    <ListView fx:id="reservationList" prefHeight="300"/>
+
+    <Button text="Delete Reservation"
+            onAction="#delete"
+            style="-fx-background-color:red; -fx-text-fill:white"/>
+
+    <Button text="Back" onAction="#back"/>
+
+</VBox>

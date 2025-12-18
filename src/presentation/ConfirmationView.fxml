@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.ConfirmationController"
+            style="-fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+    <VBox alignment="CENTER"
+          spacing="20"
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <VBox spacing="18"
+              alignment="CENTER"
+              maxWidth="420"
+              style="-fx-background-color: white;
+                     -fx-background-radius: 18;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 18, 0, 0, 6);">
+
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <!-- TITRE -->
+            <Label text="✔ Reservation Confirmed"
+                   style="-fx-font-size: 22px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #1e3c72;" />
+
+            <Label text="Your flight has been successfully booked"
+                   style="-fx-text-fill: #777;" />
+
+            <!-- 📦 CARD INFO -->
+            <VBox spacing="10"
+                  style="-fx-background-color: #f5faff;
+                         -fx-background-radius: 14;"
+                  maxWidth="360">
+
+                <padding>
+                    <Insets top="18" right="18" bottom="18" left="18"/>
+                </padding>
+
+                <Label fx:id="flightLabel"
+                       style="-fx-font-size: 14px;
+                              -fx-font-weight: bold;" />
+
+                <Label fx:id="seatLabel"
+                       style="-fx-text-fill: #555;" />
+
+                <Label fx:id="priceLabel"
+                       style="-fx-text-fill: #555;" />
+
+                <Label fx:id="reservationNumberLabel"
+                       style="-fx-text-fill: #1e90ff;
+                              -fx-font-weight: bold;" />
+            </VBox>
+
+            <!-- ACTIONS -->
+            <HBox spacing="12" alignment="CENTER">
+                <Button text="⬇ Download Ticket"
+                        onAction="#downloadPDF"
+                        style="-fx-background-color: #4facfe;
+                               -fx-text-fill: white;
+                               -fx-font-weight: bold;
+                               -fx-background-radius: 12;
+                               -fx-padding: 10 18;" />
+
+                <Button text="✉ Send Email"
+                        onAction="#sendEmail"
+                        style="-fx-background-color: #1e90ff;
+                               -fx-text-fill: white;
+                               -fx-font-weight: bold;
+                               -fx-background-radius: 12;
+                               -fx-padding: 10 18;" />
+            </HBox>
+
+            <Button text="⬅ Back to Home"
+                    onAction="#backHome"
+                    style="-fx-background-color: transparent;
+                           -fx-border-color: #4facfe;
+                           -fx-text-fill: #4facfe;
+                           -fx-border-radius: 12;
+                           -fx-padding: 10 28;" />
+
+            <Label fx:id="msgLabel"
+                   style="-fx-text-fill: green;" />
+
+        </VBox>
+    </VBox>
+</AnchorPane>

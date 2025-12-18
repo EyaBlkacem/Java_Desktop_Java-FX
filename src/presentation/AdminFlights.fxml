@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="presentation.AdminFlightsController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <!-- 🔹 Boutons CRUD -->
+    <HBox spacing="10">
+        <Button fx:id="addButton" text="Add Flight" onAction="#addFlight"/>
+        <Button fx:id="editButton" text="Edit Flight" onAction="#editFlight"/>
+        <Button fx:id="deleteButton" text="Delete Flight" onAction="#deleteFlight"/>
+    </HBox>
+
+    <!-- 🔹 TableView des vols -->
+    <TableView fx:id="flightTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="airlineCol" text="Airline" prefWidth="100"/>
+            <TableColumn fx:id="flightNoCol" text="Flight No" prefWidth="100"/>
+            <TableColumn fx:id="departureCol" text="Departure" prefWidth="100"/>
+            <TableColumn fx:id="destinationCol" text="Destination" prefWidth="100"/>
+            <TableColumn fx:id="departTimeCol" text="Depart Time" prefWidth="100"/>
+            <TableColumn fx:id="arriveTimeCol" text="Arrive Time" prefWidth="100"/>
+            <TableColumn fx:id="durationCol" text="Duration" prefWidth="80"/>
+            <TableColumn fx:id="priceCol" text="Price" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+</VBox>

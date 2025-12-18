@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="presentation.AdminDashboardController" spacing="10" style="-fx-padding: 10;">
+    <HBox spacing="10">
+        <Button text="Flights" onAction="#showFlights"/>
+        <Button text="Reservations" onAction="#showReservations"/>
+        <Button text="Users" onAction="#showUsers"/>
+        <Button text="Stats" onAction="#showStats"/>
+    </HBox>
+    <StackPane fx:id="contentPane" style="-fx-border-color: gray; -fx-border-width: 1; -fx-padding:10;" prefHeight="400" prefWidth="600"/>
+</VBox>

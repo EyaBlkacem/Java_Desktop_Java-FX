@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.geometry.Insets?>
+
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+
+            fx:controller="presentation.SearchController"
+
+            style="-fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+
+
+    <VBox alignment="CENTER"
+
+          spacing="18"
+
+          AnchorPane.topAnchor="0"
+
+          AnchorPane.bottomAnchor="0"
+
+          AnchorPane.leftAnchor="0"
+
+          AnchorPane.rightAnchor="0">
+
+
+
+        <VBox spacing="14"
+
+              alignment="CENTER"
+
+              maxWidth="520"
+
+              style="-fx-background-color: white;
+
+                     -fx-background-radius: 15;
+
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);">
+
+
+
+            <padding>
+
+                <Insets top="25" right="25" bottom="25" left="25"/>
+
+            </padding>
+
+
+
+            <!-- LOGO -->
+
+            <ImageView fitWidth="140" preserveRatio="true">
+
+                <image>
+
+                    <Image url="file:///C:/Users/fatma/eclipse-workspace/Projetexamen/src/presentation/flight_logo.png"/>
+
+                </image>
+
+            </ImageView>
+
+            <Button text="📜 My Reservations"
+
+        onAction="#openHistory"/>
+
+            
+
+
+
+            <!-- TITRE -->
+
+            <Label text="Search Flights"
+
+                   style="-fx-font-size: 22px;
+
+                          -fx-font-weight: bold;
+
+                          -fx-text-fill: #1e3c72;" />
+
+
+
+            <!-- UTILISATEUR -->
+
+            <Label fx:id="welcomeLabel"
+
+                   text="Bienvenue"
+
+                   style="-fx-text-fill: #555;" />
+
+
+
+            <!-- BARRE DE RECHERCHE -->
+
+            <HBox spacing="10" alignment="CENTER">
+
+                <TextField fx:id="depField"
+
+                           promptText="From (ex: TUN)"
+
+                           style="-fx-background-radius: 10;
+
+                                  -fx-border-radius: 10;
+
+                                  -fx-padding: 10;" />
+
+
+
+                <TextField fx:id="destField"
+
+                           promptText="To (ex: IST)"
+
+                           style="-fx-background-radius: 10;
+
+                                  -fx-border-radius: 10;
+
+                                  -fx-padding: 10;" />
+
+            </HBox>
+
+
+
+            <Button text="Search Flights"
+
+                    onAction="#search"
+
+                    maxWidth="Infinity"
+
+                    style="-fx-background-color: #4facfe;
+
+                           -fx-text-fill: white;
+
+                           -fx-font-weight: bold;
+
+                           -fx-background-radius: 10;
+
+                           -fx-padding: 10;" />
+
+
+
+            <!-- RESULTATS -->
+
+            <ListView fx:id="flightList"
+
+            VBox.vgrow="ALWAYS"
+
+                      prefHeight="240"
+
+                      style="-fx-background-radius: 10;
+
+                             -fx-border-radius: 10;" />
+
+
+
+            <!-- CHOISIR SIEGE -->
+
+            <Button text="Choose Seats"
+
+                    onAction="#chooseSeats"
+
+                    maxWidth="Infinity"
+
+                    style="-fx-background-color: #1e90ff;
+
+                           -fx-text-fill: white;
+
+                           -fx-font-weight: bold;
+
+                           -fx-background-radius: 10;
+
+                           -fx-padding: 10;" />
+
+                           <Button text="Add to My Reservations"
+
+        onAction="#addToWishlist"
+
+        maxWidth="Infinity"
+
+        style="-fx-background-color: #ff6b6b;
+
+               -fx-text-fill: white;
+
+               -fx-font-weight: bold;
+
+               -fx-background-radius: 10;
+
+               -fx-padding: 10;" />
+
+
+
+            <!-- MESSAGE -->
+
+            <Label fx:id="msgLabel"
+
+                   style="-fx-text-fill: red;" />
+
+
+
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>
+

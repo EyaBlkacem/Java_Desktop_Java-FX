@@ -1,0 +1,48 @@
+.left_form {
+    -fx-background-color: linear-gradient(to bottom right, #cc3636, #cc3636);
+    -fx-border-color: #000;
+    -fx-border-width: 0.4px 0 0.4px 0.4px;
+}
+
+.right_form {
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: 0.4px 0.4px 0.4px 0;
+}
+
+.close {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.close:hover {
+    -fx-background-color: #ff4f6c;
+}
+
+.textfield {
+    -fx-background-color: #fff;
+    -fx-background-radius: 4px;
+    -fx-border-color: #000;
+    -fx-border-width: 4px;
+    -fx-border-radius: 4px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Tahoma";
+}
+
+.textfield:focused {
+    -fx-background-color: linear-gradient(to bottom right, #4f937a, #6e2731);
+    -fx-border-width: 1.4px;
+}
+
+.login-btn {
+    -fx-background-color: linear-gradient(to bottom right, #4f8c7d, #33504c);
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.login-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #54ae96, #55867e);
+}

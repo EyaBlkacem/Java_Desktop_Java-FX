@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.geometry.Insets?>
+
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+
+            fx:controller="presentation.LoginController"
+
+            style="-fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+
+
+    <VBox alignment="CENTER"
+
+          spacing="18"
+
+          AnchorPane.topAnchor="0"
+
+          AnchorPane.bottomAnchor="0"
+
+          AnchorPane.leftAnchor="0"
+
+          AnchorPane.rightAnchor="0">
+
+
+
+        <VBox spacing="15"
+
+              alignment="CENTER"
+
+              style="-fx-background-color: white;
+
+                     -fx-background-radius: 15;
+
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);"
+
+              maxWidth="340">
+
+
+
+            <padding>
+
+                <Insets top="30" right="30" bottom="30" left="30"/>
+
+            </padding>
+
+
+
+            <!-- ✅ LOGO FLIGHTBOOKING -->
+
+            <ImageView fitWidth="150" preserveRatio="true">
+
+                <image>
+
+                    <Image url="file:///C:/Users/LENOVO/eclipse/eya/Shop_Pet/src/presentation/flight_logo.png"/>
+
+                </image>
+
+            </ImageView>
+
+
+
+          
+
+
+
+            <Label text="Sign in to your account"
+
+                   style="-fx-text-fill: #777;" />
+
+
+
+            <TextField fx:id="emailField"
+
+                       promptText="Email"
+
+                       style="-fx-background-radius: 10;
+
+                              -fx-border-radius: 10;
+
+                              -fx-padding: 10;" />
+
+
+
+            <PasswordField fx:id="passwordField"
+
+                           promptText="Mot de passe"
+
+                           style="-fx-background-radius: 10;
+
+                                  -fx-border-radius: 10;
+
+                                  -fx-padding: 10;" />
+
+
+
+            <Button text="Login"
+
+                    onAction="#login"
+
+                    maxWidth="Infinity"
+
+                    style="-fx-background-color: #4facfe;
+
+                           -fx-text-fill: white;
+
+                           -fx-font-size: 14px;
+
+                           -fx-font-weight: bold;
+
+                           -fx-background-radius: 10;
+
+                           -fx-padding: 10;" />
+
+
+
+            <Button text="Create an account"
+
+                    onAction="#goToRegister"
+
+                    style="-fx-background-color: transparent;
+
+                           -fx-text-fill: #4facfe;" />
+
+
+
+            <Label fx:id="msgLabel" style="-fx-text-fill:red;" />
+
+
+
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>
+

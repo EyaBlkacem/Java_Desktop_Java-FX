@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<?import javafx.scene.control.*?>
+
+
+
+<?import javafx.scene.layout.VBox?>
+
+
+
+
+
+
+
+<VBox alignment="CENTER" spacing="12"
+
+
+
+      xmlns:fx="http://javafx.com/fxml"
+
+
+
+      fx:controller="presentation.FlightController">
+
+
+
+
+
+
+
+    <!-- 🔹 Titre -->
+
+
+
+    <Label text="✈ Flight Ticket Reservation"
+
+
+
+           style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+
+
+
+
+
+
+
+    <!-- 🔹 Utilisateur connecté -->
+
+
+
+    <Label fx:id="welcomeLabel"
+
+
+
+           text="Bienvenue"
+
+
+
+           style="-fx-font-size:14px;"/>
+
+
+
+
+
+
+
+    <!-- 🔍 Recherche -->
+
+
+
+    <TextField fx:id="departureField" promptText="Departure"/>
+
+
+
+    <TextField fx:id="destinationField" promptText="Destination"/>
+
+
+
+
+
+
+
+    <Button text="Search Flights" onAction="#search"/>
+
+
+
+
+
+
+
+    <!-- ✈️ Liste des vols -->
+
+
+
+    <ListView fx:id="flightList"
+
+
+
+              prefHeight="200"/>
+
+
+
+
+
+
+
+    <!-- 📌 Réservation -->
+
+
+
+    <Button text="Reserve Selected Flight" onAction="#reserve"/>
+
+
+
+
+
+
+
+    <!-- 🧾 Messages -->
+
+
+
+    <Label fx:id="messageLabel"
+
+
+
+           style="-fx-text-fill:red;"/>
+
+
+
+
+
+
+
+</VBox>
+

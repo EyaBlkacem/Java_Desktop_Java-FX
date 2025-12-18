@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.PaymentController"
+            style="-fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+    <VBox alignment="CENTER"
+          spacing="20"
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- 🧾 CARD -->
+        <VBox spacing="15"
+              alignment="CENTER"
+              maxWidth="360"
+              style="-fx-background-color: white;
+                     -fx-background-radius: 18;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 18, 0, 0, 6);">
+
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <!-- 💳 TITLE -->
+            <Label text="💳 Payment Information"
+                   style="-fx-font-size: 22px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #1e3c72;" />
+
+            <Label text="Secure payment for your flight"
+                   style="-fx-text-fill: #777;" />
+
+            <!-- 👤 CARD NAME -->
+            <TextField fx:id="nameField"
+                       promptText="Cardholder Name"
+                       style="-fx-background-radius: 10;
+                              -fx-border-radius: 10;
+                              -fx-padding: 10;" />
+
+            <!-- 💳 CARD NUMBER -->
+            <TextField fx:id="cardField"
+                       promptText="Card Number"
+                       style="-fx-background-radius: 10;
+                              -fx-border-radius: 10;
+                              -fx-padding: 10;" />
+
+            <!-- 📅 EXPIRY + CVV -->
+            <HBox spacing="12">
+                <TextField fx:id="expiryField"
+                           promptText="MM/YY"
+                           style="-fx-background-radius: 10;
+                                  -fx-border-radius: 10;
+                                  -fx-padding: 10;"
+                           HBox.hgrow="ALWAYS"/>
+
+                <PasswordField fx:id="cvvField"
+                               promptText="CVV"
+                               style="-fx-background-radius: 10;
+                                      -fx-border-radius: 10;
+                                      -fx-padding: 10;"
+                               HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- ❗ MESSAGE -->
+            <Label fx:id="msgLabel"
+                   style="-fx-text-fill: red;" />
+
+            <!-- 🔘 BUTTONS -->
+            <HBox spacing="15">
+                <Button text="Pay Now"
+                        onAction="#pay"
+                        style="-fx-background-color: #4facfe;
+                               -fx-text-fill: white;
+                               -fx-font-weight: bold;
+                               -fx-background-radius: 10;
+                               -fx-padding: 10 25;" />
+
+                <Button text="Back"
+                        onAction="#back"
+                        style="-fx-background-color: transparent;
+                               -fx-border-color: #4facfe;
+                               -fx-border-radius: 10;
+                               -fx-text-fill: #4facfe;
+                               -fx-padding: 10 25;" />
+            </HBox>
+
+        </VBox>
+    </VBox>
+</AnchorPane>

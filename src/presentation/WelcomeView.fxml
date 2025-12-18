@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.Button?>
+
+
+
+<VBox alignment="CENTER" spacing="18"
+
+      xmlns:fx="http://javafx.com/fxml"
+
+      fx:controller="presentation.WelcomeController">
+
+
+
+    <Label text="Discover your Dream Flight Easily"
+
+           style="-fx-font-size:20px; -fx-font-weight:bold;" />
+
+
+
+    <Button text="Get Started"
+
+            onAction="#go"
+
+            style="-fx-background-color:#8e44ad; -fx-text-fill:white;" />
+
+
+
+</VBox>

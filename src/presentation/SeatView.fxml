@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.geometry.Insets?>
+
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+
+            fx:controller="presentation.SeatController"
+
+            style="-fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+
+
+    <VBox alignment="CENTER"
+
+          spacing="18"
+
+          AnchorPane.topAnchor="0"
+
+          AnchorPane.bottomAnchor="0"
+
+          AnchorPane.leftAnchor="0"
+
+          AnchorPane.rightAnchor="0">
+
+
+
+        <VBox spacing="15"
+
+              alignment="CENTER"
+
+              maxWidth="520"
+
+              style="-fx-background-color: white;
+
+                     -fx-background-radius: 15;
+
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);">
+
+
+
+            <padding>
+
+                <Insets top="25" right="25" bottom="25" left="25"/>
+
+            </padding>
+
+
+
+            <!-- LOGO -->
+
+            <ImageView fitWidth="120" preserveRatio="true">
+
+                <image>
+
+                    <Image url="@assets/flight_logo.png"/>
+
+                </image>
+
+            </ImageView>
+
+
+
+            <!-- TITRE -->
+
+            <Label fx:id="flightLabel"
+
+                   text="Choose your seat"
+
+                   style="-fx-font-size: 22px;
+
+                          -fx-font-weight: bold;
+
+                          -fx-text-fill: #1e3c72;" />
+
+
+
+            <!-- GRILLE DES SIEGES -->
+
+            <GridPane fx:id="seatGrid"
+
+                      hgap="8"
+
+                      vgap="8"
+
+                      alignment="CENTER"
+
+                      style="-fx-padding: 10;
+
+                             -fx-background-color: #f5f7fa;
+
+                             -fx-background-radius: 10;" />
+
+
+
+            <!-- ACTIONS -->
+
+            <HBox spacing="12" alignment="CENTER">
+
+
+
+                <Label fx:id="selectedLabel"
+
+                       text="Selected: none"
+
+                       style="-fx-text-fill: #555;
+
+                              -fx-font-weight: bold;" />
+
+
+
+                <Button text="Confirm Seat"
+
+                        onAction="#confirm"
+
+                        style="-fx-background-color: #4facfe;
+
+                               -fx-text-fill: white;
+
+                               -fx-font-weight: bold;
+
+                               -fx-background-radius: 10;
+
+                               -fx-padding: 8 15;" />
+
+
+
+                <Button text="Back"
+
+                        onAction="#back"
+
+                        style="-fx-background-color: transparent;
+
+                               -fx-text-fill: #4facfe;
+
+                               -fx-font-weight: bold;" />
+
+
+
+            </HBox>
+
+
+
+            <!-- MESSAGE -->
+
+            <Label fx:id="msgLabel"
+
+                   style="-fx-text-fill: red;" />
+
+
+
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>
